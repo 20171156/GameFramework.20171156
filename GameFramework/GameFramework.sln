@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP01.HelloSDL", "PP01.Hello
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP02.BreakUpHelloSDL", "PP02.BreakUpHelloSDL\PP02.BreakUpHelloSDL.vcxproj", "{EB20C51A-D291-4060-8FA3-1D529DC82676}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP03.GameClass", "PP03.GameClass\PP03.GameClass.vcxproj", "{2522B267-2B45-4297-9D7E-F31C61B348AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{EB20C51A-D291-4060-8FA3-1D529DC82676}.Release|x64.Build.0 = Release|x64
 		{EB20C51A-D291-4060-8FA3-1D529DC82676}.Release|x86.ActiveCfg = Release|Win32
 		{EB20C51A-D291-4060-8FA3-1D529DC82676}.Release|x86.Build.0 = Release|Win32
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Debug|x64.ActiveCfg = Debug|x64
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Debug|x64.Build.0 = Debug|x64
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Debug|x86.ActiveCfg = Debug|Win32
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Debug|x86.Build.0 = Debug|Win32
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Release|x64.ActiveCfg = Release|x64
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Release|x64.Build.0 = Release|x64
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Release|x86.ActiveCfg = Release|Win32
+		{2522B267-2B45-4297-9D7E-F31C61B348AC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
