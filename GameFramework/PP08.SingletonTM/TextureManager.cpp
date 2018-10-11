@@ -2,7 +2,7 @@
 #include <SDL_image.h>
 #include "TextureManager.h"
 using namespace std;
-
+TextureManager* TextureManager::s_pInstance = NULL;
 bool TextureManager::load(string fileName, string id, SDL_Renderer * pRenderer)
 {
 	SDL_Surface* pTempSurface = IMG_Load(fileName.c_str());
@@ -11,7 +11,7 @@ bool TextureManager::load(string fileName, string id, SDL_Renderer * pRenderer)
 		return false;
 	}
 
-	SDL_Texture* pTexture =SDL_CreateTextureFromSurface(pRenderer, pTempSurface);
+	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(pRenderer, pTempSurface);
 	SDL_FreeSurface(pTempSurface);
 
 	if (pTexture != 0)
