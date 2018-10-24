@@ -49,3 +49,4 @@ void TextureManager::drawFrame(string id, int x, int y, int width, int height, i
 
 	SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
 }
+

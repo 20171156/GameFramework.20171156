@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "Window.h"
 #include <SDL.h>
 
 Game* g_game = 0;
@@ -6,7 +7,7 @@ Game* g_game = 0;
 int main(int argc, char *argv[])
 {
 	g_game = new Game();
-	g_game->init("Chapter1", 100, 100, 800, 480, false);
+	g_game->init("Chapter1", WINDOW_X, WINDOW_Y, WINDOW_WIDTH, WINDOW_HEIGHT, false);
 
 	while (g_game->running())
 	{

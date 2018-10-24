@@ -1,7 +1,7 @@
 #include "GameObject.h"
 
 void GameObject::load(int x, int y, int width, int height,
-	std::string textureID)
+	std::string textureID, SDL_RendererFlip flip)
 {
 	m_x = x;
 	m_y = y;
@@ -10,18 +10,21 @@ void GameObject::load(int x, int y, int width, int height,
 	m_textureID = textureID;
 	m_currentRow = 1;
 	m_currentFrame = 1;
+    m_flip = SDL_FLIP_NONE;
 }
 
 void GameObject::draw(SDL_Renderer* pRenderer)
 {
-	TextureManager::Instance()->drawFrame(m_textureID,
+    //원래는 drawframe이나 움직이는 이미지가 아니므로 draw로 교체
+	TextureManager::Instance()->draw(m_textureID,
 		m_x, m_y, m_width, m_height,
-		m_currentRow, m_currentFrame, pRenderer);
+		pRenderer, m_flip);
 }
 
 void GameObject::update()
 {
 	m_x += 1;
+    m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
 }
 
 void GameObject::clean()

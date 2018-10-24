@@ -1,6 +1,5 @@
 #include "Game.h"
 #include "GameObject.h"
-#include "Player.h"
 using namespace std;
 
 bool Game::init(const char* title, int xpos, int ypos,
@@ -17,24 +16,20 @@ bool Game::init(const char* title, int xpos, int ypos,
 		m_bRunning = true;
 
 		//load 부분 대치
-		if (!TextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer))
-		{
-			return false;
-		}
-		
-		m_go = new GameObject();
-		m_player = new Player();
-		m_enemy = new Enemy();
+        if (!TextureManager::Instance()->load("assets/mario.png", "mario", m_pRenderer))
+        {
+            return false;
+        }
+        
+        m_monster1 = new Monster(3);
+        m_monster2 = new Monster(5);
 
-		m_go->load(100, 100, 128, 82, "animate");
-		m_player->load(300, 300, 128, 82, "animate");
-		m_enemy->load(0, 0, 128, 82, "animate");
+        m_monster1->load(0, 0, 100, 100, "mario", SDL_FLIP_NONE);
+        m_monster2->load(0, 150, 100, 100, "mario", SDL_FLIP_NONE);
 
-		m_gameObjects.push_back(m_go);
-		m_gameObjects.push_back(m_player);
-		m_gameObjects.push_back(m_enemy);
-
-		SDL_SetRenderDrawColor(m_pRenderer, 255, 0, 0, 255);
+        m_gameObjects.push_back(m_monster1);
+        m_gameObjects.push_back(m_monster2);
+		SDL_SetRenderDrawColor(m_pRenderer, 255, 255,255, 255);
 	}
 	else
 	{
@@ -45,11 +40,14 @@ bool Game::init(const char* title, int xpos, int ypos,
 
 void Game::render()
 {
-	SDL_RenderClear(m_pRenderer);
-	m_go->draw(m_pRenderer);
-	m_player->draw(m_pRenderer);
-	m_enemy->draw(m_pRenderer);
-	SDL_RenderPresent(m_pRenderer);
+    SDL_RenderClear(m_pRenderer); // clear to the draw colour
+    for (vector<GameObject*>::size_type i = 0;
+        i != m_gameObjects.size(); i++)
+    {
+        m_gameObjects[i]->draw(m_pRenderer);
+    }
+    SDL_RenderPresent(m_pRenderer); // draw to the screen
+
 }
 
 void Game::clean()
@@ -78,10 +76,11 @@ void Game::handleEvents()
 
 void Game::update()
 {
-	//m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
-	m_go->update();
-	m_player->update();
-	m_enemy->update();
+    for (vector<GameObject*>::size_type i = 0;
+        i != m_gameObjects.size(); i++)
+    {
+        m_gameObjects[i]->update();
+    }
 }
 
 Game::Game()
