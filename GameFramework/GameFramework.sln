@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP12.Vector2D", "PP12.Vecto
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP13.KInputHandler", "PP13.KInputHandler\PP13.KInputHandler.vcxproj", "{9903CC4C-A6DC-490C-82D3-69E252E1DF0F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP14.MInputHandler", "PP14.MInputHandler\PP14.MInputHandler.vcxproj", "{1AB0171C-64D8-43CD-A823-26BF169D698A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -141,6 +143,14 @@ Global
 		{9903CC4C-A6DC-490C-82D3-69E252E1DF0F}.Release|x64.Build.0 = Release|x64
 		{9903CC4C-A6DC-490C-82D3-69E252E1DF0F}.Release|x86.ActiveCfg = Release|Win32
 		{9903CC4C-A6DC-490C-82D3-69E252E1DF0F}.Release|x86.Build.0 = Release|Win32
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Debug|x64.ActiveCfg = Debug|x64
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Debug|x64.Build.0 = Debug|x64
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Debug|x86.ActiveCfg = Debug|Win32
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Debug|x86.Build.0 = Debug|Win32
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Release|x64.ActiveCfg = Release|x64
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Release|x64.Build.0 = Release|x64
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Release|x86.ActiveCfg = Release|Win32
+		{1AB0171C-64D8-43CD-A823-26BF169D698A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
