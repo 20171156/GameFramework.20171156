@@ -12,6 +12,7 @@ public:
     virtual void draw();
     virtual void update();
     virtual void clean();
+	virtual void onlyDraw();
 protected:
     //int m_x;
     //int m_y;   

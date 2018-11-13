@@ -33,3 +33,10 @@ void SDLGameObject::clean()
 {
 
 }
+
+void SDLGameObject::onlyDraw()
+{
+	TextureManager::Instance()->draw(m_textureID,
+		(int)m_position.getX(), (int)m_position.getY(),
+		m_width, m_height,TheGame::Instance()->getRenderer());
+}

@@ -5,6 +5,7 @@
 #include <vector>
 #include "Player.h"
 #include "Enemy.h"
+#include "Ball.h"
 
 class Game
 {

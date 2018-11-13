@@ -1,11 +1,10 @@
 #pragma once
-#pragma once
 #include "SDLGameObject.h"
 
 class Player : public SDLGameObject
 {
 private:
-    void handleInput();
+    //void handleInput();
 public:
     Player(const LoaderParams* pParams);
     virtual void draw();

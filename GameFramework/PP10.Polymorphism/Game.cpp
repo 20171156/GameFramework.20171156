@@ -27,6 +27,8 @@ bool Game::init(const char* title, int xpos, int ypos,
         m_monster1->load(0, 0, 100, 100, "mario", SDL_FLIP_NONE);
         m_monster2->load(0, 150, 100, 100, "mario", SDL_FLIP_NONE);
 
+		
+
         m_gameObjects.push_back(m_monster1);
         m_gameObjects.push_back(m_monster2);
 		SDL_SetRenderDrawColor(m_pRenderer, 255, 255,255, 255);

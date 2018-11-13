@@ -6,7 +6,7 @@ Player::Player(const LoaderParams* pParams) : SDLGameObject(pParams)
 
 }
 
-void Player::handleInput()
+/*void Player::handleInput()
 {
     if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT))
     {
@@ -24,7 +24,7 @@ void Player::handleInput()
     {
         m_velocity.setY(10);
     }
-}
+}*/
 
 void Player::draw()
 {
@@ -35,7 +35,7 @@ void Player::update()
 {
     m_velocity.setX(0);
     m_velocity.setY(0);
-    handleInput();
+    //handleInput();
     m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
     //m_acceleration.setX(1);
     SDLGameObject::update();
