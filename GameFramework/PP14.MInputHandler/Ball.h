@@ -1,6 +1,7 @@
 #pragma once
 #include "SDLGameObject.h"
 
+
 class Ball : public SDLGameObject
 {
 private:

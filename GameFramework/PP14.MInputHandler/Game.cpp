@@ -27,7 +27,7 @@ bool Game::init(const char* title, int xpos, int ypos,
 
         m_gameObjects.push_back(new Player(new LoaderParams(10, 10, 128, 82, "animate")));
         //m_gameObjects.push_back(new Enemy(new LoaderParams(300, 300, 128, 82, "animate")));
-		m_gameObjects.push_back(new Ball(new LoaderParams(20, 20, 50, 50, "ball")));
+		//m_gameObjects.push_back(new Ball(new LoaderParams(20, 20, 50, 50, "ball")));
 		//ball은 이동하는 
 		//캐릭터가 움직이나? - 이동에 따라 볼발사
         SDL_SetRenderDrawColor(m_pRenderer, 255, 0, 0, 255);
@@ -63,6 +63,11 @@ void Game::clean()
 void Game::quit()
 {
     m_bRunning = false;
+}
+
+std::vector<GameObject*> Game::getGameObjects() const
+{
+	return m_gameObjects;
 }
 
 void Game::handleEvents()

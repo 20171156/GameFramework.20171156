@@ -17,10 +17,12 @@ private:
     SDL_Renderer* m_pRenderer;
     bool m_bRunning;
 
-    std::vector<GameObject*> m_gameObjects;
+	std::vector<GameObject*> m_gameObjects;
+
 
 
 public:
+
     ~Game();
     bool init(const char* title, int xpos, int ypos,
         int width, int height, bool fullscreen);
@@ -41,7 +43,9 @@ public:
         return s_pInstance;
     }
 
-    SDL_Renderer* getRenderer() const { return m_pRenderer; }
+    SDL_Renderer * getRenderer() const { return m_pRenderer; }
+
+	std::vector<GameObject*> getGameObjects() const;
 };
 
 typedef Game TheGame;
